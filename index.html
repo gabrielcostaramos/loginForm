@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Login-Form</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="title">Login Form</div>
+        <form action="#">
+            <div class="field">
+                <input type="text" required>
+                <span class="fas fa-user"></span>
+                <label for="">Email or Phone</label>
+            </div>
+            <div class="field">
+                <input type="password" id="password" required>
+                <span class="fas fa-lock"></span>
+                <span class="fas fa-eye" id="eye-icon" onclick="togglePassword()"></span>
+                <label for="">Password</label>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot password</a>
+
+            </div>
+            <button class="sign-in">Sign in</button>
+            <div class="sign-up">
+                Not a member? 
+                <a href="#">Sign up now</a>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

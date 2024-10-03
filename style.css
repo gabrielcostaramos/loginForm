@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --bg-color: #bebfc4;
+    --text-color: #010110;
+    --label-color: #0c0c0c;
+    --link-color:#331bbd;
+    --shadow-light:rgba(163, 104, 104, 0.514);
+    --shadow-dark:#2c2b2b09;
+
+}
+
+html, body {
+    height: 100vh;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width: 400px;
+    padding: 60px 30px;
+    background:var(--bg-color);
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.45), 2px 2px 5px var(--shadow-dark);
+
+}
+.title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+
+}
+
+.field{
+    height: 3.5rem;
+    width:100%;
+    display: flex;
+    position: relative;
+}
+
+.field:nth-child(2){
+    margin-top: 20px;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    padding-left: 3rem;
+    border: none;
+    font-size: 1.2rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 25px;
+    outline: none;
+    box-shadow: inset 2px 2px 5px var(--shadow-light),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.45);
+}
+
+.field input:focus{
+    box-shadow: inset 1px 1px 2px var(--shadow-light),
+    inset -1px -1px 2px rgba(255, 255, 255, 0.45);
+}
+.field span {
+    position: absolute;
+    color: var(--text-color);
+    width: 3.5rem;
+    line-height: 3.5rem;
+}
+
+#eye-icon{
+    position: absolute;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.field label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3rem;
+    color: var(--label-color);
+    pointer-events: none;
+
+    input:valid ~ & {
+        opacity: 0;
+}
+
+}
+.forgot-password {
+    text-align: left;
+    margin: 10px 0 10px 7px;
+
+    a{
+        font-size: 1rem;
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.sign-in{
+    margin: 15px 0;
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--bg-color);
+    border-radius:25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    box-shadow: 2px 2px 5px var(--shadow-light),
+    -5px -5px 10px rgba(255, 255, 255, 0.45);;
+}
+
+.sign-in:focus {
+    color: var(--link-color);
+    box-shadow: inset 2px 2px 5px var(--shadow-light),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.45);;
+}
+
+.sign-up {
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: 1rem;
+
+    a{
+        color: var(--link-color);
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
